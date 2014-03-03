@@ -2,9 +2,11 @@ package models;
 
 public class Article {
 
+    private int id;
     private String header;
     private String body;
     private String imageUrl;
+    private boolean available;
 
     public Article(String header, String body) {
         this.header = header;
@@ -33,5 +35,21 @@ public class Article {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

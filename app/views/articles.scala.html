@@ -4,15 +4,24 @@
     @for( article <- articles ) {
         <div class="col-6 col-sm-6 col-lg-4 articles">
             <div class="media">
-                <a class="pull-left" href="#">
+                <a class="pull-left" href="article/@article.getId()">
                     <img class="media-object" src="http://placehold.it/100x100&text=article" alt="..." />
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading">@article.getHeader()</h4>
                     <p>@article.getBody() </p>
-                    <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
                 </div>
             </div>
+            <p>
+                @if( article.isAvailable() ) {
+                    <a class="btn btn-primary" href="#" role="button">Låne nå</a>
+                } else {
+                <a class="btn btn-danger" href="#" role="button">Utleid</a>
+                }
+
+                <a class="btn btn-default" href="article/@article.getId()" role="button">Detaljer »</a>
+
+            </p>
         </div><!--/span-->
     }
 </div><!--/row-->
