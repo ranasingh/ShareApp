@@ -1,0 +1,5 @@
+@(user: User)
+
+@template("Brukerprofil") {
+    @articles( user.getOwnArticles() )
+}
