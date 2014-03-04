@@ -1,11 +1,13 @@
 package models;
 
-import controllers.ApplicationHelper;
+import play.db.ebean.Model;
 
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+@Entity
+public class User extends Model {
 
     private String username = "";
     private String firstname = "";
@@ -13,7 +15,7 @@ public class User {
     private String email = "";
     private String mobile = "";
     private String apartmentNumber = "";
-    private List<Article> ownArticles = ApplicationHelper.createArticlesOwnedByUser();
+    private List<Article> ownArticles = new ArrayList<>();
     private List<Article> rentedArticles = new ArrayList<>();
 
     public User() {}

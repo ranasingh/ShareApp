@@ -1,6 +1,5 @@
 package controllers;
 
-import models.Article;
 import models.User;
 
 import java.util.ArrayList;
@@ -8,9 +7,10 @@ import java.util.List;
 
 public class ApplicationHelper {
 
-    public static final List<Article> articleList = createDummyArticles();
+    //public static final List<Article> articleList = createDummyArticles();
     public static final List<User> userList = createListOfAppUsers();
 
+    /*
     public static List<Article> createDummyArticles() {
         List<Article> articles = new ArrayList<>();
 
@@ -18,6 +18,7 @@ public class ApplicationHelper {
             Article article = new Article("Heading " + i, "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.");
             if (i%3 != 0) {
                 article.setAvailable(true);
+                article.setOwner("ranjitis");
             }
             article.setId(i);
             articles.add(article);
@@ -35,12 +36,14 @@ public class ApplicationHelper {
                 article.setAvailable(true);
             }
             article.setId(i);
+            article.setOwner("ranjitis");
+
             articles.add(article);
         }
 
         return articles;
     }
-
+      */
     public static List<User> createListOfAppUsers() {
         List<User> users = new ArrayList<>();
         users.add(new User("ranjitis", "Rana", "Singh"));

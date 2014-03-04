@@ -2,10 +2,9 @@ name := "ShareApp"
 
 version := "1.0-SNAPSHOT"
 
-libraryDependencies ++= Seq(
-  javaJdbc,
-  javaEbean,
-  cache
-)     
-
 play.Project.playJavaSettings
+
+lazy val root = project.in(file("."))
+    .dependsOn(common)
+
+lazy val common = project in file("modules/common")

@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.common.Application.index()
+
+GET     /article/:articleId         controllers.common.Application.articleDetails(articleId)
+
+GET     /user/:username             controllers.common.UserController.index(username)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.common.Assets.at(path="/public", file)

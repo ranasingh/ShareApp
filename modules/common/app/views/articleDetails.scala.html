@@ -1,4 +1,4 @@
-@(article: Article)
+@(article: models.Article)
 
 @templateWithJumbo("Artikkel Detaljer") {
     <div class="col-6 col-sm-6 col-lg-4 articles">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <p>
-            @if( article.isAvailable() ) {
+            @if( article.getBorrowerId() != null ) {
             <a class="btn btn-primary" href="#" role="button">Låne nå</a>
             } else {
             <a class="btn btn-danger" href="#" role="button">Utleid</a>

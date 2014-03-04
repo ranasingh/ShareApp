@@ -1,4 +1,4 @@
-@(articles: List[Article])
+@(articles: List[models.Article])
 
 <div class="row">
     @for( article <- articles ) {
@@ -8,13 +8,7 @@
                     <a href="article/@article.getId()">
                         <img class="media-object" src="http://placehold.it/100x100&text=article" alt="..." />
                     </a>
-                    <p>
-                        @if( article.isAvailable() ) {
-                        <a class="btn btn-primary" href="#" role="button">Låne nå</a>
-                        } else {
-                        <a class="btn btn-danger" href="#" role="button">Utleid</a>
-                        }
-                    </p>
+
                 </span>
                 <div class="media-body">
                     <h4 class="media-heading">

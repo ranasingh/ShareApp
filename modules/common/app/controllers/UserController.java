@@ -1,4 +1,4 @@
-package controllers;
+package controllers.common;
 
 import models.User;
 import play.mvc.Controller;
@@ -9,13 +9,13 @@ public class UserController extends Controller {
 
     public static Result index(String username) {
         User user = new User();
-
+          /*
         for (User u : ApplicationHelper.userList) {
             if (u.getUsername().equals(username)) {
                 user = u;
             }
         }
-
+            */
         return ok(userprofile.render(user));
     }
 }
