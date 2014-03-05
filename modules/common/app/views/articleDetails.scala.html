@@ -4,10 +4,11 @@
     <div class="col-6 col-sm-6 col-lg-4 articles">
         <div class="media">
             <a class="pull-left" href="#">
-                <img class="media-object" src="http://placehold.it/100x100&text=article" alt="..." />
+                <img class="media-object" src="@article.getImageUrl()" alt="..." />
             </a>
             <div class="media-body">
                 <h4 class="media-heading">@article.getHeader()</h4>
+                <p><b>@article.getTeaser() </b></p>
                 <p>@article.getBody() </p>
             </div>
         </div>

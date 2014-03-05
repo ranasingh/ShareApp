@@ -6,3 +6,8 @@
     margin-right: 25px;
     margin-top: 10px;
 }
+
+.articles img {
+    width: 100px;
+    height: 100px;
+}

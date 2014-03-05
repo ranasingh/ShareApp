@@ -6,7 +6,7 @@
             <div class="media">
                 <span class="pull-left">
                     <a href="article/@article.getId()">
-                        <img class="media-object" src="http://placehold.it/100x100&text=article" alt="..." />
+                        <img class="media-object" src="@article.getImageUrl()" alt="..." />
                     </a>
 
                 </span>
@@ -16,7 +16,7 @@
                             @article.getHeader()
                         </a>
                     </h4>
-                    <p>@article.getBody() </p>
+                    <p>@article.getTeaser() </p>
                     <a class="text-info" href="article/@article.getId()">Detaljer »</a>
                 </div>
             </div>
