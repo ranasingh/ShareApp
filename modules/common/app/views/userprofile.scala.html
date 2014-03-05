@@ -1,5 +1,39 @@
 @(user: User)
 
 @templateUserprofile("Brukerprofil") {
-    @articles( user.getOwnArticles() )
+    <section class="panel panel-success">
+        <!-- panel contents -->
+        <div class="panel-heading">
+            <h4>
+                Alle dine artikler
+            </h4>
+        </div>
+        <div class="panel-body">
+            <p>Dette er en oversikt over dine artikler. Her kan du legge til flere artikler, ta bort eller endre.</p>
+        </div>
+    </section>
+
+    <section class="panel panel-info">
+        <!-- panel contents -->
+        <div class="panel-heading">
+            <h4>
+                Dine artikler som er lånt
+            </h4>
+        </div>
+        <div class="panel-body">
+            <p>Dette er en oversikt over dine artikler som er lånt av andre.</p>
+        </div>
+    </section>
+
+    <section class="panel panel-warning">
+        <!-- panel contents -->
+        <div class="panel-heading">
+            <h4>
+                Artikler som du har lånt
+            </h4>
+        </div>
+        <div class="panel-body">
+            <p>Dette er en oversikt over de artikler du har lånt.</p>
+        </div>
+    </section>
 }

@@ -46,9 +46,9 @@ public class ApplicationHelper {
       */
     public static List<User> createListOfAppUsers() {
         List<User> users = new ArrayList<User>();
-        users.add(new User("ranjitis", "Rana", "Singh"));
-        users.add(new User("fredpett", "Fredrik", "Pettersen"));
-        users.add(new User("son", "Aran", "Singh"));
+        //users.add(new User("ranjitis", "Rana", "Singh"));
+        //users.add(new User("fredpett", "Fredrik", "Pettersen"));
+        //users.add(new User("son", "Aran", "Singh"));
         return users;
     }
 

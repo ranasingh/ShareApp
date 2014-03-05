@@ -5,13 +5,16 @@
 
 @templateUserprofile("Brukerprofil") {
 
-    <section id="new-article" class="row">
-        <h2>Legg inn nytt verktøy</h2>
+    <section id="new-article" class="row panel panel-primary">
+        <div class="panel-heading">
+            <h4>Legg inn nytt artikkel</h4>
+        </div>
 
+        <div class="panel-body">
         @form(action = controllers.common.routes.Application.newArticle(), 'id -> "articleForm", 'role -> "form") {
 
             <div class="form-group col-xs-7">
-                @inputText(articleForm("name"), '_label -> "Verktøynavn", 'class -> "form-control")
+                @inputText(articleForm("name"), '_label -> "Artikkelnavn", 'class -> "form-control")
             </div>
             <div class="form-group col-xs-7">
                 @inputText(articleForm("producer"), '_label -> "Produsent", 'class -> "form-control")
@@ -34,11 +37,12 @@
                 <p class="help-block">Example block-level help text here.</p>
             </div>
             <div class="checkbox col-xs-7">
-                @checkbox(articleForm("published"), '_label -> "Er verktøy tilgjengelig til utlån?")
+                @checkbox(articleForm("published"), '_label -> "Er artikkel tilgjengelig til utlån?")
             </div>
 
             <button type="submit" class="btn btn-primary col-xs-7">Submit</button>
 
         }
+        </div>
     </section>
 }

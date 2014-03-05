@@ -8,6 +8,7 @@ GET     /                           controllers.common.Application.index()
 GET     /article/newArticle         controllers.common.Application.newArticlePage()
 POST    /article/newArticle         controllers.common.Application.newArticle()
 
+POST    /login                      controllers.common.AuthController.auth()
 GET     /article/:articleId         controllers.common.Application.articleDetails(articleId)
 
 GET     /user/:username             controllers.common.UserController.index(username)

@@ -1,0 +1,26 @@
+@import helper._
+@import helper.twitterBootstrap._
+
+<div class="col-xs-6 col-sm-2 sidebar-offcanvas " id="login" role="navigation">
+
+    <section class="panel panel-primary">
+        <!-- panel contents -->
+        <div class="panel-heading">
+            <h4>
+                Login
+            </h4>
+        </div>
+        <div class="panel-body">
+            @form(action = controllers.common.routes.AuthController.auth(), 'role -> "form") {
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Din email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ditt passord">
+                </div>
+                <button type="submit" class="btn btn-default">Logg inn</button>
+            }
+        </div>
+    </section>
+
+</div><!--/span-->
