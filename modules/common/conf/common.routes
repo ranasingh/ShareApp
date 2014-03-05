@@ -5,6 +5,7 @@
 # Home page
 GET     /                           controllers.common.Application.index()
 
+GET     /article/newArticle        controllers.common.Application.newArticle()
 GET     /article/:articleId         controllers.common.Application.articleDetails(articleId)
 
 GET     /user/:username             controllers.common.UserController.index(username)

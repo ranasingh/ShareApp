@@ -15,8 +15,8 @@ public class User extends Model {
     private String email = "";
     private String mobile = "";
     private String apartmentNumber = "";
-    private List<Article> ownArticles = new ArrayList<>();
-    private List<Article> rentedArticles = new ArrayList<>();
+    private List<Article> ownArticles = new ArrayList<Article>();
+    private List<Article> rentedArticles = new ArrayList<Article>();
 
     public User() {}
 
