@@ -16,7 +16,6 @@ public class Article extends Model {
     @Constraints.Required
     public String name;
 
-    @Constraints.Required
     public String producer;
 
     @Constraints.Required
@@ -28,14 +27,13 @@ public class Article extends Model {
     @Constraints.Required
     public String body;
 
+    @Constraints.Required
     public boolean published;
 
     public String imageUrl;
 
-    @Constraints.Required
     public Long ownerId;
 
-    @Constraints.Required
     public Long borrowerId;
 
     public Timestamp created;
@@ -45,6 +43,13 @@ public class Article extends Model {
     public static Finder<Long,Article> find = new Finder<Long,Article>(
             Long.class, Article.class
     );
+
+    // TODO: This should be in a service?
+    public static void create(Article article) {
+        article.setOwnerId(1L);
+        article.setBorrowerId(1L);
+        article.save();
+    }
 
     public Long getId() {
         return id;

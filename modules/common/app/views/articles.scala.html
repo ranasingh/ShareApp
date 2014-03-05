@@ -17,7 +17,7 @@
                         </a>
                     </h4>
                     <p>@article.getTeaser() </p>
-                    <a class="text-info" href="article/@article.getId()">Detaljer »</a>
+                    <a class="text-info" href="@controllers.common.routes.Application.articleDetails(article.getId().toString())">Detaljer »</a>
                 </div>
             </div>
         </div><!--/span-->

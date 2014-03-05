@@ -1,25 +1,44 @@
+@(articleForm: Form[Article])
+
+@import helper._
+@import helper.twitterBootstrap._
 
 @templateUserprofile("Brukerprofil") {
-    <h2>Lage ny artikkel</h2>
-<form role="form">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile">File input</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox"> Check me out
-        </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+
+    <section id="new-article" class="row">
+        <h2>Legg inn nytt verktøy</h2>
+
+        @form(action = controllers.common.routes.Application.newArticle(), 'id -> "articleForm", 'role -> "form") {
+
+            <div class="form-group col-xs-7">
+                @inputText(articleForm("name"), '_label -> "Verktøynavn", 'class -> "form-control")
+            </div>
+            <div class="form-group col-xs-7">
+                @inputText(articleForm("producer"), '_label -> "Produsent", 'class -> "form-control")
+            </div>
+
+            <div class="form-group col-xs-7">
+                @inputText(articleForm("header"), '_label -> "Tittel", 'class -> "form-control")
+            </div>
+
+            <div class="form-group col-xs-7">
+                @inputText(articleForm("teaser"), '_label -> "Intro", 'class -> "form-control")
+            </div>
+
+            <div class="form-group col-xs-7">
+                @textarea(articleForm("body"), '_label -> "Beskrivelse", 'class -> "form-control")
+            </div>
+
+            <div class="form-group col-xs-7">
+                @inputText(articleForm("imageUrl"), '_label -> "Bildeurl", 'class -> "form-control")
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox col-xs-7">
+                @checkbox(articleForm("published"), '_label -> "Er verktøy tilgjengelig til utlån?")
+            </div>
+
+            <button type="submit" class="btn btn-primary col-xs-7">Submit</button>
+
+        }
+    </section>
 }
