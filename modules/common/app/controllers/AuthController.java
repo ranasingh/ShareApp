@@ -9,10 +9,16 @@ import views.html.userprofile;
 
 public class AuthController extends Controller {
 
+    private User usermodel = new User();
+
     public static Result auth() {
         DynamicForm requestData = Form.form().bindFromRequest();
-        String firstname = requestData.get("firstname");
-        String lastname = requestData.get("lastname");
+        String email = requestData.get("email");
+        String password = requestData.get("password");
+
+        // do authentication
+
+        // redirect to index page with valid session for user
         return ok(userprofile.render(new User()));
     }
 }

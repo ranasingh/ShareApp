@@ -13,10 +13,10 @@
         <div class="panel-body">
             @form(action = controllers.common.routes.AuthController.auth(), 'role -> "form") {
                 <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Din email">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Din email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ditt passord">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Ditt passord">
                 </div>
                 <button type="submit" class="btn btn-default">Logg inn</button>
             }
